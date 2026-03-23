@@ -38,17 +38,21 @@
           {
             "group": "WordPress Essentials",
             "pages": [
+              "introductie",
               "inloggen",
               "navigatie",
               "berichten",
-              "updates"
+              "updates",
+              "changelog"
             ]
           },
           {
             "group": "Bricks Builder",
-            "pages": []
+            "pages": [
+              "introductie-1",
+              "untitled-page"
+            ]
           },
-          "changelog",
           {
             "group": "Domeinnamen en hosting",
             "pages": []
@@ -67,7 +71,8 @@
               "word-press",
               "bricks-builder",
               "sure-cart",
-              "scripe-io"
+              "scripe-io",
+              "rank-math-seo"
             ]
           }
         ]
