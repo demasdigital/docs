@@ -28,7 +28,7 @@
         "tab": "Kennisbank",
         "pages": [
           {
-            "group": "Getting started",
+            "group": "Aan de slag",
             "pages": [
               "index",
               "quickstart",
@@ -36,30 +36,29 @@
             ]
           },
           {
-            "group": "Customization",
+            "group": "WordPress Essentials",
             "pages": [
-              "essentials/settings",
-              "essentials/navigation"
+              "inloggen-in-word-press"
             ]
+          },
+          "changelog",
+          {
+            "group": "Domeinnamen en hosting",
+            "pages": []
           },
           {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
+            "group": "E-mail",
+            "pages": []
           },
           {
-            "group": "AI tools",
+            "group": "Tools",
             "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
+              "word-press",
+              "bricks-builder",
+              "sure-cart",
+              "scripe-io"
             ]
-          },
-          "changelog"
+          }
         ]
       }
     ]
