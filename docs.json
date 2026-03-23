@@ -30,9 +30,7 @@
           {
             "group": "Aan de slag",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "index"
             ]
           },
           {
