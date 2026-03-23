@@ -12,14 +12,14 @@
     "global": {
       "anchors": [
         {
-          "anchor": "Tools",
-          "icon": "book-open-cover",
-          "href": "https://demasvandijk.nl/tools"
-        },
-        {
           "anchor": "Artikelen",
           "icon": "newspaper",
           "href": "https://demasvandijk.nl/artikelen/"
+        },
+        {
+          "anchor": "Tools",
+          "icon": "book-open-cover",
+          "href": "https://demasvandijk.nl/tools"
         }
       ]
     },
@@ -38,8 +38,15 @@
           {
             "group": "WordPress Essentials",
             "pages": [
-              "inloggen-in-word-press"
+              "inloggen",
+              "navigatie",
+              "berichten",
+              "updates"
             ]
+          },
+          {
+            "group": "Bricks Builder",
+            "pages": []
           },
           "changelog",
           {
@@ -48,7 +55,10 @@
           },
           {
             "group": "E-mail",
-            "pages": []
+            "pages": [
+              "e-mailadres-instellen",
+              "handtekening"
+            ]
           },
           {
             "group": "Tools",
