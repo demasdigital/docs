@@ -2,6 +2,9 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "luma",
   "name": "Kennisbank",
+  "defaultLanguage": "nl",
+  "language": "nl",
+  "locale": "nl-NL",
   "colors": {
     "primary": "#152cc9",
     "light": "#4D7FFF",
