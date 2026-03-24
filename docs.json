@@ -41,8 +41,7 @@
               "navigatie",
               "berichten",
               "media",
-              "updates",
-              "changelog"
+              "updates"
             ]
           },
           {
@@ -75,6 +74,10 @@
             ]
           }
         ]
+      },
+      {
+        "tab": "Changelog",
+        "href": "https://www.notion.so/demasdesign/Software-Changelog-f8045ee170c041f187f94044882145a1?source=copy_link"
       }
     ]
   },
