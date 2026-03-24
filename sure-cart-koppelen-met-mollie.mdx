@@ -1,0 +1,70 @@
+---
+title: "SureCart koppelen aan Mollie"
+---
+
+Mollie is een betalingsservice waarmee je klanten veilig kunnen betalen. Hier leer je hoe je Mollie aan SureCart koppelt.
+
+---
+
+### Wat is Mollie?
+
+Mollie is een betalingsprovider. Het zorgt ervoor dat je klanten op je website kunnen betalen. Mollie is Nederlands, betrouwbaar en gemakkelijk in te stellen.
+
+### Stap 1: Maak een Mollie account
+
+1. Ga naar [**https://www.mollie.com/nl**](https://www.mollie.com/nl)
+2. Klik op **"Gratis account aanmaken"**
+3. Vul je gegevens in:
+   - Voornaam en achternaam
+   - E-mailadres
+   - Wachtwoord
+   - Je bedrijfsgegevens
+4. Klik **"Account aanmaken"**
+
+Je bent nu ingelogd in je Mollie dashboard.
+
+<Info>
+  Mollie vraagt je bedrijfsgegevens. Dit is normaal – zij willen zeker weten dat je echt bent voordat betalingen kunnen worden verwerkt.
+</Info>
+
+### Stap 2: Activeer je Mollie account
+
+Na registratie moet je je account activeren:
+
+1. Mollie stuurt je een **verificatie-email**
+2. Klik op de link in die email
+3. Volg de verificatiestappen (identiteitsverificatie, bankgegevens)
+4. Wacht op goedkeuring (meestal 1-2 werkdagen)
+
+Zodra je account is geactiveerd, kun je live betalingen ontvangen.
+
+### Stap 3: Haal je Mollie API-sleutel op
+
+1. Log in op [**https://dashboard.mollie.com**](https://dashboard.mollie.com)
+2. Ga naar **"Instellingen"** (links in het menu)
+3. Klik op **"API-sleutels"**
+4. Je ziet twee sleutels:
+   - **Test-sleutel** (voor testen, geen echte betalingen)
+   - **Live-sleutel** (voor echte betalingen)
+5. Kopieer de **Live-sleutel** (je hebt deze straks nodig)
+
+<Warning>
+  Geef je API-sleutel aan niemand! Dit is je toegang tot je betalingen. Behandel het zoals je wachtwoord.
+</Warning>
+
+### Stap 4: Koppel Mollie aan SureCart
+
+1. Open je WordPress dashboard
+2. Ga naar **SureCart** → **Instellingen** (of Settings)
+3. Zoek naar **"Betalingsmethodes"** of **"Payment Methods"**
+4. Klik op **"Mollie"** of **"Mollie configureren"**
+5. Plak je **Mollie API-sleutel** in het veld
+6. Klik **"Opslaan"** of **"Save"**
+
+Mollie is nu verbonden!
+
+Via [SureCart](https://surecart.com/) kan je ook Mollie koppelen.
+
+<Frame>
+  ![Sure Cart](/images/SureCart.png)
+</Frame>

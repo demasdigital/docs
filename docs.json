@@ -43,7 +43,8 @@
               "navigatie",
               "berichten",
               "media",
-              "updates"
+              "updates",
+              "backups"
             ]
           },
           {
@@ -70,13 +71,27 @@
             ]
           },
           {
+            "group": "E-commerce",
+            "pages": [
+              "sure-cart-koppelen-met-mollie"
+            ]
+          },
+          {
             "group": "Tools",
             "pages": [
+              "cloud86",
               "word-press",
               "bricks-builder",
               "sure-cart",
               "scripe-io",
-              "rank-math-seo"
+              "rank-math-seo",
+              "mailerlite"
+            ]
+          },
+          {
+            "group": "Meertaligheid",
+            "pages": [
+              "paginas-vertalen-met-polylang"
             ]
           }
         ]
