@@ -48,13 +48,16 @@
             "group": "Bricks Builder",
             "pages": [
               "introductie-1",
-              "untitled-page",
+              "bewerken",
               "componenten"
             ]
           },
           {
             "group": "Domeinnamen en hosting",
-            "pages": []
+            "pages": [
+              "domeinnaam-registreren",
+              "domeinnaam-aan-hosting-toevoegen"
+            ]
           },
           {
             "group": "E-mail",
@@ -98,18 +101,6 @@
       "label": "Dashboard",
       "href": "https://dashboard.mintlify.com"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
