@@ -59,6 +59,7 @@
             "group": "Domeinnamen en hosting",
             "pages": [
               "domeinnaam-registreren",
+              "domeinnaam-verhuizen",
               "domeinnaam-aan-hosting-toevoegen",
               "gebruikersbeheer-cloud86"
             ]
@@ -78,6 +79,12 @@
             ]
           },
           {
+            "group": "Meertaligheid",
+            "pages": [
+              "paginas-vertalen-met-polylang"
+            ]
+          },
+          {
             "group": "Tools",
             "pages": [
               "cloud86",
@@ -90,9 +97,10 @@
             ]
           },
           {
-            "group": "Meertaligheid",
+            "group": "SEO",
             "pages": [
-              "paginas-vertalen-met-polylang"
+              "meta-titel-en-beschrijving",
+              "untitled-page"
             ]
           }
         ]
