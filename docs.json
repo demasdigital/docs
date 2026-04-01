@@ -85,6 +85,13 @@
             ]
           },
           {
+            "group": "SEO",
+            "pages": [
+              "meta-titel-en-beschrijving",
+              "redirects-instellen"
+            ]
+          },
+          {
             "group": "Tools",
             "pages": [
               "cloud86",
@@ -94,13 +101,6 @@
               "scripe-io",
               "rank-math-seo",
               "mailerlite"
-            ]
-          },
-          {
-            "group": "SEO",
-            "pages": [
-              "meta-titel-en-beschrijving",
-              "redirects-instellen"
             ]
           }
         ]
