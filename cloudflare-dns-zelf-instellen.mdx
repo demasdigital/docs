@@ -13,7 +13,7 @@ Je nieuwe website draait via **Cloudflare**: snel, veilig en zonder server die o
 
 <table>
   <colgroup>
-    <col width="154" />
+    <col width="232" />
     <col width="602" />
   </colgroup>
   <thead>
@@ -82,7 +82,13 @@ Je nieuwe website draait via **Cloudflare**: snel, veilig en zonder server die o
        - **TXT** met de naam `_dmarc`: het DMARC-record
        - **CNAME** met de naam `autodiscover`: voor het instellen van e-mail in Outlook
     4. Ontbreekt er iets in Cloudflare? Klik op **Add record** en neem het exact over van je huidige provider.
-    5. Staat bij een record dat met je e-mail te maken heeft (zoals `mail` of `autodiscover`) een **oranje wolkje**? Zet het dan op **DNS only** (grijs wolkje).
+    5. Zet de **proxy** uit bij de records van je **huidige website** en je **e-mail**. Klik bij die records op het **oranje wolkje** en zet het op **DNS only** (grijs wolkje). Het gaat om:
+       - de **A**-, **AAAA**- en **CNAME**-records met de naam `@` (je domeinnaam zelf) en `www`
+       - records die met e-mail te maken hebben, zoals `mail`, `smtp`, `imap` en `autodiscover`
+
+    <Note>
+      Met een grijs wolkje verandert er niets aan je huidige website en e-mail: bezoekers gaan rechtstreeks naar je huidige server, zoals nu. Bij de lancering van je nieuwe website regel ik de rest.
+    </Note>
 
     <Warning>
       Ontbreken er e-mailinstellingen (zoals MX-, SPF- of DKIM-records) als je de nameservers wijzigt, dan komt je e-mail niet meer aan.
