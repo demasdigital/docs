@@ -1,15 +1,19 @@
 ---
 title: "Cloudflare DNS laten instellen"
-description: "Ik koppel je domeinnaam aan Cloudflare. Je hoeft zelf bijna niets te doen."
+description: "Ik koppel je domeinnaam aan Cloudflare. Je kiest zelf hoe je mij de gegevens geeft."
 ---
 
 Je nieuwe website draait via **Cloudflare**: snel, veilig en zonder server die onderhoud nodig heeft. Daarvoor moet je domeinnaam naar Cloudflare wijzen. Ik regel dit voor je, je hebt zelf geen Cloudflare-account nodig. Je domein blijft gewoon geregistreerd bij je huidige provider en je e-mail blijft werken.
+
+<Tip>
+  Doe je het liever zelf? Bekijk dan [Cloudflare DNS zelf instellen](/cloudflare-dns-zelf-instellen).
+</Tip>
 
 ## Wat verandert er?
 
 <table>
   <colgroup>
-    <col width="205" />
+    <col width="216" />
     <col width="602" />
   </colgroup>
   <thead>
@@ -40,17 +44,35 @@ Je nieuwe website draait via **Cloudflare**: snel, veilig en zonder server die o
 
 ## Wat ik van je nodig heb
 
-Je hoeft zelf niets aan te maken. Ik heb alleen even toegang nodig tot het domeinbeheer bij je provider, bijvoorbeeld Mijndomein, TransIP of Cloud86 om de nameservers te wijzigen. Kies wat voor jou het makkelijkst is:
+Je hoeft zelf niets aan te maken. Kies een van deze twee opties:
 
 <CardGroup cols={2}>
-  <Card title="Samen via schermdelen" icon="display">
-    We plannen een kort moment in en jij klikt mee terwijl ik je begeleid. Je hoeft geen inloggegevens te delen.
+  <Card title="Optie 1: Screenshot en export" icon="file-export">
+    Je stuurt mij een **screenshot** en een **export** van de DNS-instellingen van je domein. Ik zet alles klaar in Cloudflare. Daarna wijzig jij alleen de nameservers bij je provider; dat duurt een paar minuten.
   </Card>
 
-  <Card title="Tijdelijke toegang" icon="key">
-    Als je provider het toelaat, geef je mij tijdelijk toegang tot je domeinbeheer.
+  <Card title="Optie 2: Tijdelijke toegang" icon="key">
+    Je geeft mij tijdelijk toegang tot het domeinbeheer bij je provider. Ik regel dan alles, ook het wijzigen van de nameservers.
   </Card>
 </CardGroup>
+
+### Optie 1: Screenshot en export sturen
+
+1. Log in bij je domeinprovider, bijvoorbeeld Mijndomein, TransIP of Cloud86.
+2. Ga naar je domeinnaam en open de **DNS-instellingen** (soms **DNS-records** of **DNS-beheer**).
+3. Maak een **screenshot** van het volledige overzicht. Past het niet op één scherm? Maak dan meerdere screenshots.
+4. Zie je een knop als **Exporteren** of **Download zone file**? Download dan ook dat bestand. Heeft je provider deze optie niet, dan is een screenshot genoeg.
+5. Stuur de screenshot(s) en eventueel het exportbestand naar mij.
+
+Ik zet alles klaar in Cloudflare en stuur je daarna **twee nameservers** met een korte uitleg. Dan doe je zelf alleen nog dit:
+
+1. Zet **DNSSEC** uit bij je domeinnaam, als dat aan staat.
+2. Vervang de huidige **nameservers** door de twee die je van mij krijgt en sla op.
+3. Laat het mij weten.
+
+### Optie 2: Tijdelijke toegang geven
+
+Geef mij tijdelijk toegang tot het domeinbeheer bij je provider. Sommige providers hebben hiervoor een optie om een extra gebruiker of beheerder toe te voegen. Anders kun je je inloggegevens veilig met mij delen.
 
 <Warning>
   Deel wachtwoorden nooit via gewone e-mail. Gebruik een wachtwoordmanager of een eenmalige deellink, en wijzig je wachtwoord na afloop.
@@ -60,8 +82,7 @@ Je hoeft zelf niets aan te maken. Ik heb alleen even toegang nodig tot het domei
 
 1. Ik zet je domein in Cloudflare en neem alle bestaande instellingen over, zoals je e-mail.
 2. Ik controleer of alle e-mailinstellingen kloppen.
-3. Ik zet **DNSSEC** uit bij je provider, als dat nodig is.
-4. Ik wijzig de **nameservers** naar Cloudflare.
+3. Bij **optie 2** zet ik **DNSSEC** uit en wijzig ik de **nameservers** voor je. Bij **optie 1** doe je dat zelf met de nameservers die ik je stuur.
 5. Zodra Cloudflare het domein heeft geactiveerd, test ik je website en e-mail.
 
 De overstap is meestal binnen een paar uur actief, soms duurt het tot 24 uur. Ik laat je weten wanneer alles klaar is.
