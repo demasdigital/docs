@@ -1,0 +1,93 @@
+---
+title: "Cloudflare DNS laten instellen"
+description: "Ik koppel je domeinnaam aan Cloudflare. Je hoeft zelf bijna niets te doen."
+---
+
+Je nieuwe website draait via **Cloudflare**: snel, veilig en zonder server die onderhoud nodig heeft. Daarvoor moet je domeinnaam naar Cloudflare wijzen. Ik regel dit voor je, je hebt zelf geen Cloudflare-account nodig. Je domein blijft gewoon geregistreerd bij je huidige provider en je e-mail blijft werken.
+
+## Wat verandert er?
+
+<table>
+  <colgroup>
+    <col width="205" />
+    <col width="602" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Onderdeel</th>
+      <th>Wat er gebeurt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Domeinregistratie</td>
+      <td>Blijft bij je huidige provider. Je betaalt het domein daar zoals altijd.</td>
+    </tr>
+    <tr>
+      <td>Website</td>
+      <td>Gaat via Cloudflare.</td>
+    </tr>
+    <tr>
+      <td>E-mail</td>
+      <td>Blijft bij je huidige e-mailprovider. Ik neem alle e-mailinstellingen vooraf over.</td>
+    </tr>
+    <tr>
+      <td>DNS-beheer</td>
+      <td>Verhuist naar Cloudflare. Daar beheer ik de instellingen voortaan voor je.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Wat ik van je nodig heb
+
+Je hoeft zelf niets aan te maken. Ik heb alleen even toegang nodig tot het domeinbeheer bij je provider, bijvoorbeeld Mijndomein, TransIP of Cloud86 om de nameservers te wijzigen. Kies wat voor jou het makkelijkst is:
+
+<CardGroup cols={2}>
+  <Card title="Samen via schermdelen" icon="display">
+    We plannen een kort moment in en jij klikt mee terwijl ik je begeleid. Je hoeft geen inloggegevens te delen.
+  </Card>
+
+  <Card title="Tijdelijke toegang" icon="key">
+    Als je provider het toelaat, geef je mij tijdelijk toegang tot je domeinbeheer.
+  </Card>
+</CardGroup>
+
+<Warning>
+  Deel wachtwoorden nooit via gewone e-mail. Gebruik een wachtwoordmanager of een eenmalige deellink, en wijzig je wachtwoord na afloop.
+</Warning>
+
+## Wat ik daarna voor je doe
+
+1. Ik zet je domein in Cloudflare en neem alle bestaande instellingen over, zoals je e-mail.
+2. Ik controleer of alle e-mailinstellingen kloppen.
+3. Ik zet **DNSSEC** uit bij je provider, als dat nodig is.
+4. Ik wijzig de **nameservers** naar Cloudflare.
+5. Zodra Cloudflare het domein heeft geactiveerd, test ik je website en e-mail.
+
+De overstap is meestal binnen een paar uur actief, soms duurt het tot 24 uur. Ik laat je weten wanneer alles klaar is.
+
+## Veelgestelde vragen
+
+<AccordionGroup>
+  <Accordion title="Werkt mijn e-mail tijdens de overstap gewoon door?">
+    Ja. Ik neem alle e-mailinstellingen vooraf over in Cloudflare. Na de overstap test ik je e-mail nog een keer.
+  </Accordion>
+
+  <Accordion title="Gaat mijn website offline?">
+    Nee. Tot de lancering wijst je domein nog naar je huidige website. Pas als de nieuwe website klaar is, zet ik hem live.
+  </Accordion>
+
+  <Accordion title="Heb ik zelf een Cloudflare-account nodig?">
+    Nee. Ik beheer je website en DNS-instellingen in mijn eigen Cloudflare-omgeving. Dit valt onder je hosting- en onderhoudspakket bij Demas Digital.
+  </Accordion>
+
+  <Accordion title="Blijft mijn domeinnaam van mij?">
+    Ja. Je domeinnaam blijft altijd op jouw naam geregistreerd bij je eigen provider. Stop je ooit met mijn diensten, dan help ik je met het overzetten van je website en DNS-instellingen naar een andere partij.
+  </Accordion>
+
+  <Accordion title="Kan ik later terug?">
+    Ja. Je kunt de nameservers altijd weer terugzetten naar je huidige provider.
+  </Accordion>
+</AccordionGroup>
+
+Neem bij vragen gerust contact met me op.

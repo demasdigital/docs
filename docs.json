@@ -38,7 +38,7 @@
           {
             "group": "WordPress Essentials",
             "pages": [
-              "introductie",
+              "wordpress-introductie",
               "inloggen",
               "navigatie",
               "berichten",
@@ -103,6 +103,13 @@
               "scripe-io",
               "rank-math-seo",
               "mailerlite"
+            ]
+          },
+          {
+            "group": "Cloudflare",
+            "pages": [
+              "cloudflare-dns-zelf-instellen",
+              "untitled-page"
             ]
           }
         ]

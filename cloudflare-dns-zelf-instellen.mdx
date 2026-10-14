@@ -1,0 +1,146 @@
+---
+title: "Cloudflare DNS zelf instellen"
+description: "Zo zet je je domeinnaam zelf in je eigen Cloudflare-account en geef je mij toegang."
+---
+
+Je nieuwe website draait via **Cloudflare**: snel, veilig en zonder server die onderhoud nodig heeft. Daarvoor moet je domeinnaam naar Cloudflare wijzen. In deze handleiding maak je zelf een Cloudflare-account aan, zet je je domein erin en geef je mij toegang als beheerder. Je domein blijft gewoon geregistreerd bij je huidige provider en je e-mail blijft werken.
+
+<Tip>
+  Liever dat ik alles voor je regel? Bekijk dan [Cloudflare DNS laten instellen](/cloudflare-dns-laten-instellen).
+</Tip>
+
+## Wat verandert er?
+
+<table>
+  <colgroup>
+    <col width="154" />
+    <col width="602" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Onderdeel</th>
+      <th>Wat er gebeurt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Domeinregistratie</td>
+      <td>Blijft bij je huidige provider. Je betaalt het domein daar zoals altijd.</td>
+    </tr>
+    <tr>
+      <td>Website</td>
+      <td>Gaat via Cloudflare.</td>
+    </tr>
+    <tr>
+      <td>E-mail</td>
+      <td>Blijft bij je huidige e-mailprovider. Cloudflare neemt je e-mailinstellingen over; jij controleert of ze compleet zijn voordat je overstapt.</td>
+    </tr>
+    <tr>
+      <td>DNS-beheer</td>
+      <td>Verhuist naar je eigen Cloudflare-account. Ik beheer de instellingen voor je als beheerder.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Wat heb je nodig?
+
+- Toegang tot het domeinbeheer bij je provider, bijvoorbeeld Mijndomein, TransIP of Cloud86
+- Ongeveer 20 minuten
+
+## Stappen
+
+<Steps>
+  <Step title="Maak een gratis Cloudflare-account aan">
+    Ga naar [dash.cloudflare.com/sign-up](https://dash.cloudflare.com/sign-up) en maak een account aan met het e-mailadres van je bedrijf.
+
+    <Tip>
+      Zet direct **tweestapsverificatie** aan via je profiel. Zo is je account extra goed beveiligd.
+    </Tip>
+  </Step>
+  <Step title="Nodig mij uit als beheerder">
+    1. Ga in Cloudflare naar **Manage account** → **Members**.
+    2. Klik op **Invite** en vul mijn e-mailadres in: [**info@demas.digital**](mailto:info@demas.digital)
+    3. Kies de rol **Administrator** en verstuur de uitnodiging.
+
+    Zo kan ik later je website koppelen en de instellingen beheren.
+  </Step>
+  <Step title="Voeg je domein toe">
+    1. Ga in Cloudflare naar **Domains** → **Overview**, klik op **Add domain** en kies **Connect domain**.
+    2. Vul je domeinnaam in, bijvoorbeeld `jouwbedrijf.nl`, en klik op **Continue**.
+    3. Kies het **Free** plan.
+    4. Cloudflare scant nu automatisch je bestaande DNS-instellingen.
+  </Step>
+  <Step title="Controleer de DNS-instellingen">
+    Cloudflare neemt de meeste instellingen automatisch over, maar niet altijd alles. Controleer daarom zelf of alles klopt voordat je verdergaat. Vooral de e-mailinstellingen zijn belangrijk.
+
+    1. Open bij je huidige domeinprovider het overzicht van je **DNS-instellingen** (soms **DNS-records** of **DNS-beheer**). Maak er een screenshot van, zodat je altijd kunt terugkijken.
+    2. Open in Cloudflare je domein en ga naar **DNS** → **Records**.
+    3. Vergelijk de twee lijsten regel voor regel. Let vooral op:
+       - **MX**: bepaalt waar je e-mail binnenkomt
+       - **TXT** met `v=spf1`: het SPF-record voor je e-mail
+       - **TXT** of **CNAME** met `domainkey` in de naam: het DKIM-record voor je e-mail
+       - **TXT** met de naam `_dmarc`: het DMARC-record
+       - **CNAME** met de naam `autodiscover`: voor het instellen van e-mail in Outlook
+    4. Ontbreekt er iets in Cloudflare? Klik op **Add record** en neem het exact over van je huidige provider.
+    5. Staat bij een record dat met je e-mail te maken heeft (zoals `mail` of `autodiscover`) een **oranje wolkje**? Zet het dan op **DNS only** (grijs wolkje).
+
+    <Warning>
+      Ontbreken er e-mailinstellingen (zoals MX-, SPF- of DKIM-records) als je de nameservers wijzigt, dan komt je e-mail niet meer aan.
+    </Warning>
+
+    <Note>
+      Twijfel je? Omdat je mij als beheerder hebt uitgenodigd, kan ik op verzoek even meekijken. Stuur me dan een berichtje met een screenshot van de DNS-instellingen bij je huidige provider.
+    </Note>
+  </Step>
+  <Step title="Zet DNSSEC uit bij je domeinprovider">
+    1. Log in bij je domeinprovider en ga naar je domeinnaam.
+    2. Zoek de instelling **DNSSEC**. Staat die aan? Zet hem dan **uit** en sla op.
+
+    Zie je deze instelling niet, of staat hij al uit? Ga dan door naar de volgende stap.
+  </Step>
+  <Step title="Wijzig de nameservers">
+    Cloudflare laat je **twee nameservers** zien, bijvoorbeeld:
+
+    ```text
+    anna.ns.cloudflare.com
+    bob.ns.cloudflare.com
+    ```
+
+    Je vindt ze in Cloudflare bij je domein, onder **Overview** of **DNS**. Gebruik altijd de twee die Cloudflare jou geeft; de namen hierboven zijn alleen een voorbeeld.
+
+    1. Ga bij je domeinprovider naar je domeinnaam en zoek **Nameservers** (soms onder **DNS** of **Geavanceerd**).
+    2. Kies voor **eigen nameservers** of **andere nameservers**.
+    3. Verwijder de huidige nameservers.
+    4. Vul de twee nameservers van Cloudflare in.
+    5. Sla de wijziging op.
+  </Step>
+  <Step title="Laat het weten">
+    Stuur mij een berichtje als het gelukt is. De wijziging is meestal binnen een paar uur actief, soms duurt het tot 24 uur. Cloudflare stuurt je een e-mail zodra je domein actief is. Stuur dan een testmail naar jezelf en vanaf je eigen adres om te controleren of je e-mail goed werkt. Daarna koppel ik je website.
+  </Step>
+</Steps>
+
+## Veelgestelde vragen
+
+<AccordionGroup>
+  <Accordion title="Werkt mijn e-mail tijdens de overstap gewoon door?">
+    Ja, als alle e-mailinstellingen in Cloudflare staan. Controleer ze daarom goed voordat je de nameservers wijzigt (zie stap 4). Stuur na de overstap een testmail naar jezelf en vanaf je eigen adres, zodat je zeker weet dat alles werkt.
+  </Accordion>
+
+  <Accordion title="Gaat mijn website offline?">
+    Nee. Tot de lancering wijst je domein nog naar je huidige website. Pas als de nieuwe website klaar is, zet ik hem live.
+  </Accordion>
+
+  <Accordion title="Moet ik iets betalen voor Cloudflare?">
+    Nee. Voor je website gebruiken we het gratis plan van Cloudflare.
+  </Accordion>
+
+  <Accordion title="Wie is eigenaar van het Cloudflare-account?">
+    Jij. Het account staat op jouw naam en ik ben uitgenodigd als beheerder. Stop je ooit met mijn diensten, dan haal je mij er eenvoudig af en blijft alles van jou.
+  </Accordion>
+
+  <Accordion title="Kan ik later terug?">
+    Ja. Je kunt de nameservers altijd weer terugzetten naar je huidige provider.
+  </Accordion>
+</AccordionGroup>
+
+Kom je ergens niet uit? Neem gerust contact met me op, dan kijken we samen.
