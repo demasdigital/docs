@@ -67,6 +67,13 @@
             ]
           },
           {
+            "group": "Cloudflare",
+            "pages": [
+              "cloudflare-dns-zelf-instellen",
+              "cloudflare-dns-laten-instellen"
+            ]
+          },
+          {
             "group": "Mail",
             "pages": [
               "beginnershandleiding",
@@ -103,13 +110,6 @@
               "scripe-io",
               "rank-math-seo",
               "mailerlite"
-            ]
-          },
-          {
-            "group": "Cloudflare",
-            "pages": [
-              "cloudflare-dns-zelf-instellen",
-              "cloudflare-dns-laten-instellen"
             ]
           }
         ]
