@@ -1,0 +1,128 @@
+---
+title: "Nameservers wijzigen naar Cloudflare"
+description: "Zo wijzig je in een paar minuten de nameservers van je domein, zodat je website via Cloudflare kan draaien. Je e-mail blijft gewoon werken."
+---
+
+## Doel
+
+Je nieuwe website draait via Cloudflare. Daarvoor moet je domein naar Cloudflare wijzen. Dat doe je door **twee nameservers** aan te passen. Meer is het niet.
+
+De DNS-instellingen (de records voor je website en e-mail) heb ik al voor je klaargezet in Cloudflare. Jij hoeft dus alleen de records te controleren en de nameservers te wijzigen.
+
+<Tip>
+  Liever dat ik het voor je doe? Geef me tijdelijk toegang tot je account. Dan duurt het een paar minuten.
+</Tip>
+
+## Wat verandert er?
+
+<table>
+  <colgroup>
+    <col width="210" />
+    <col width="429" />
+  </colgroup>
+  <thead>
+    <tr>
+      <th>Onderdeel</th>
+      <th>Wat er gebeurt</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>**Domeinregistratie**</td>
+      <td>Het domein blijft van jou.</td>
+    </tr>
+    <tr>
+      <td>**E-mail**</td>
+      <td>Blijft werken zoals nu. De e-mailinstellingen heb ik overgenomen.</td>
+    </tr>
+    <tr>
+      <td>**Website**</td>
+      <td>Blijft de huidige website tonen, tot de nieuwe site live gaat.</td>
+    </tr>
+    <tr>
+      <td>**DNS-beheer**</td>
+      <td>Verhuist van jouw provider naar Cloudflare.</td>
+    </tr>
+  </tbody>
+</table>
+
+## Wat heb je nodig?
+
+- De inloggegevens van je hosting account
+- Ongeveer 5 minuten
+- De twee nameservers van Cloudflare (die krijg je van mij, zie hieronder)
+
+## De nameservers die je gaat invullen
+
+<Note>
+  Ik vul deze twee nameservers voor je in voordat ik deze pagina naar je stuur. Gebruik **alleen** deze twee en niet de voorbeelden van andere websites.
+</Note>
+
+```text
+NAAM1.ns.cloudflare.com
+NAAM2.ns.cloudflare.com
+```
+
+## Stappen
+
+<Steps>
+  <Step title="Log in bij jouw provider">
+    Ga naar de website en log in op je account.
+  </Step>
+  <Step title="Open je domein">
+    Kies het domein **wego.yoga** in het overzicht van je domeinnamen.
+  </Step>
+  <Step title="Controleer of DNSSEC uit staat">
+    Staat **DNSSEC** aan bij je domein? Zet het dan eerst uit. Anders kan je domein tijdelijk onbereikbaar worden.
+
+    <Warning>
+      Weet je niet of DNSSEC aanstaat? Stuur me een schermafbeelding van de pagina, dan kijk ik mee. Verander niets voordat je zeker weet dat het uit staat.
+    </Warning>
+  </Step>
+  <Step title="Ga naar de nameservers">
+    Zoek bij je domein de optie **Nameservers** (soms ook **DNS-beheer** of **Domeininstellingen**).
+  </Step>
+  <Step title="Kies eigen nameservers">
+    Kies de optie om **eigen of andere nameservers** te gebruiken, in plaats van de standaard nameservers.
+  </Step>
+  <Step title="Vul de twee nameservers van Cloudflare in">
+    Vul de twee nameservers van hierboven in. Verwijder de oude nameservers, zodat er **alleen** de twee van Cloudflare overblijven.
+  </Step>
+  <Step title="Sla op en laat het me weten">
+    Sla de wijziging op en stuur me een berichtje. Daarna hoef je niets meer te doen.
+  </Step>
+</Steps>
+
+<Warning>
+  Verwijder of wijzig verder **niets**, zoals records of e-mailinstellingen.
+</Warning>
+
+## Wat gebeurt er daarna?
+
+- Cloudflare activeert je domein meestal binnen een paar uur, soms duurt het tot 24 uur.
+- Ik controleer of alles werkt, inclusief je e-mail. Stuur gerust een testmail naar je eigen adres.
+- Je huidige website blijft zichtbaar tot de nieuwe site live gaat. Bezoekers merken niets.
+
+<Note>
+  Je account waar je mail en domein staan blijft bestaan en het domein blijft op jouw naam geregistreerd. Je bent dus nergens aan vastgeklikt.
+</Note>
+
+## Veelgestelde vragen
+
+<AccordionGroup>
+  <Accordion title="Blijft mijn e-mail werken?">
+    Ja. Alle e-mailinstellingen (zoals MX, SPF en DKIM) heb ik vooraf overgenomen en gecontroleerd. Ik test na de wijziging ook of het goed werkt.
+  </Accordion>
+
+  <Accordion title="Gaat mijn website offline?">
+    Nee. Tot de nieuwe site live gaat, laat je domein de huidige website zien.
+  </Accordion>
+
+  <Accordion title="Kan ik dit terugdraaien?">
+    Ja. Je kunt de nameservers altijd weer terugzetten. Het duurt dan weer een paar uur voor het overal is doorgevoerd.
+  </Accordion>
+
+  <Accordion title="Ik zie niet precies dezelfde opties als in deze uitleg">
+    Dat kan, omdat de schermen  soms veranderen. Stuur me een schermafbeelding van wat je ziet, dan wijs ik je de juiste plek aan.
+  </Accordion>
+</AccordionGroup>
